@@ -15,14 +15,14 @@ hist_button = st.button('Criar histograma')
 
 if hist_button:
     st.write('Criando um histograma para o conjunto de dados de anúncios de carros')
-    fig = px.histogram(car_data, x="odometer")
+    fig = px.histogram(car_data, x="Hodômetro")
     st.plotly_chart(fig, use_container_width=True)
 
 scatter_button = st.button('Criar gráfico de dispersão')
 
 if scatter_button:
     st.write('Criando um gráfico de dispersão para o conjunto de dados')
-    fig = px.scatter(car_data, x="odometer", y="price", title="Preço vs Quilometragem (Odometer)")
+    fig = px.scatter(car_data, x="Hodômetro", y="Preço", title="Preço vs Quilometragem (Hodômetro)")
     st.plotly_chart(fig, use_container_width=True)
 
 
@@ -33,10 +33,10 @@ build_scatter = st.checkbox('Exibir Gráfico de Dispersão')
 
 if build_histogram:
     st.write('Exibindo Histograma via Checkbox:')
-    fig = px.histogram(car_data, x="odometer")
+    fig = px.histogram(car_data, x="Hodômetro")
     st.plotly_chart(fig, use_container_width=True)
 
 if build_scatter:
     st.write('Exibindo Gráfico de Dispersão via Checkbox:')
-    fig = px.scatter(car_data, x="odometer", y="price")
+    fig = px.scatter(car_data, x="Hodômetro", y="Preço")
     st.plotly_chart(fig, use_container_width=True)
